@@ -50,8 +50,10 @@ const wrap = { maxWidth: 1200, margin: "0 auto", padding: "0 24px", width: "100%
 const pillRadius = 100;
 
 /* === BRAND LOGO COMPONENT === */
-const BrandLogo = ({ size = 36 }) => (
-  <img src="/pausesetu-icon.png" alt="PauseSetu" width={size} height={size} style={{ borderRadius: size > 20 ? 10 : 4, objectFit: "cover" }} />
+const BrandLogo = ({ size = 50, scale = 1 }) => (
+  <div style={{ width: size, height: size, borderRadius: size > 20 ? 10 : 4, overflow: "hidden", flexShrink: 0 }}>
+    <img src="/pausesetu-icon.png" alt="PauseSetu" width={size * scale} height={size * scale} style={{ objectFit: "cover", marginLeft: -(size * (scale - 1)) / 2, marginTop: -(size * (scale - 1)) / 2 }} />
+  </div>
 );
 
 /* === ICONS === */
