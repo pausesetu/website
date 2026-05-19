@@ -1,18 +1,23 @@
 import "./globals.css";
 export const metadata = {
-  title: "PauseSetu — The Bridge to Subscription Control",
-  description: "India's first subscription pause infrastructure. Resume billing under the existing RBI mandate — zero re-authentication, zero churn.",
+  title: "PauseSetu - The Bridge to Subscription Control",
+  description: "India's first subscription pause infrastructure. Resume billing under the existing RBI mandate - zero re-authentication, zero churn.",
   keywords: "subscription pause, RBI 2FA, churn reduction, recurring payments India, Razorpay pause, mandate management, PauseSetu",
+  icons: {
+    icon: "/pausesetu-icon.png",
+    apple: "/pausesetu-icon.png",
+  },
   openGraph: {
-    title: "PauseSetu — India's Subscription Pause Infrastructure",
+    title: "PauseSetu - India's Subscription Pause Infrastructure",
     description: "Don't let Pause become Cancel. Resume billing under the existing RBI mandate.",
     url: "https://pausesetu.in",
     siteName: "PauseSetu",
+    images: [{ url: "/pausesetu-icon.png", width: 512, height: 512 }],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "PauseSetu — The Bridge to Subscription Control",
+    title: "PauseSetu - The Bridge to Subscription Control",
     description: "India's first subscription pause infrastructure. Zero friction. Zero churn.",
   },
 };
