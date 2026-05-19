@@ -47,11 +47,9 @@ export default function PrivacyPolicy() {
       <nav style={{ borderBottom: `1px solid ${C.border}`, padding: "16px 24px", background: C.bg, position: "sticky", top: 0, zIndex: 100 }}>
         <div style={{ maxWidth: 880, margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <Link href="/" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }} className="legal-heading">
-            <div style={{ width: 34, height: 34, borderRadius: 9, background: C.accent, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff" }}>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="3" width="5" height="18" rx="1"/><rect x="14" y="3" width="5" height="18" rx="1"/></svg>
-            </div>
+            <img src="/pausesetu-icon.png" alt="PauseSetu" width={34} height={34} style={{ borderRadius: 9, objectFit: "cover" }} />
             <span style={{ fontWeight: 700, fontSize: 19, color: C.text, letterSpacing: "-0.03em" }}>
-              Pause<span style={{ color: C.accentHighlight }}>Pay</span>
+              Pause<span style={{ color: C.accentHighlight }}>Setu</span>
             </span>
           </Link>
           <Link href="/" style={{ color: C.textSub, textDecoration: "none", fontSize: 14, fontWeight: 500 }} className="legal-heading">{"\u2190"} Back to Home</Link>
@@ -59,7 +57,6 @@ export default function PrivacyPolicy() {
       </nav>
 
       <main style={{ maxWidth: 760, margin: "0 auto", padding: "72px 32px 120px" }}>
-        {/* Header */}
         <div className="legal-heading" style={{ marginBottom: 56, paddingBottom: 32, borderBottom: `2px solid ${C.text}` }}>
           <p style={{ color: C.accent, fontSize: 12, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", marginBottom: 16 }}>Legal Document</p>
           <h1 style={{ fontSize: "clamp(36px, 5vw, 52px)", fontWeight: 800, color: C.text, letterSpacing: "-0.035em", lineHeight: 1.1, marginBottom: 16 }}>
@@ -67,33 +64,31 @@ export default function PrivacyPolicy() {
           </h1>
           <div style={{ display: "flex", gap: 24, flexWrap: "wrap", fontSize: 13, color: C.textSub }}>
             <span><strong style={{ color: C.text }}>Effective Date:</strong> April 16, 2026</span>
-            <span><strong style={{ color: C.text }}>Version:</strong> 1.0</span>
+            <span><strong style={{ color: C.text }}>Version:</strong> 1.1</span>
           </div>
         </div>
 
-        {/* Preamble */}
         <div className="legal-heading" style={{
           padding: "20px 24px", borderLeft: `3px solid ${C.accent}`,
           background: C.bgAlt, marginBottom: 40, borderRadius: "0 8px 8px 0",
         }}>
           <p style={{ fontSize: 14, color: C.text, lineHeight: 1.7, fontStyle: "italic" }}>
-            This Privacy Policy describes the policies and procedures of PausePay on the collection, use, and disclosure of your information when you use our service and informs you of your privacy rights under applicable Indian data protection laws.
+            This Privacy Policy describes the policies and procedures of PauseSetu on the collection, use, and disclosure of your information when you use our service and informs you of your privacy rights under applicable Indian data protection laws.
           </p>
         </div>
 
-        {/* Body */}
         <div>
           <p style={para}>
-            PausePay (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting the privacy and personal data of all individuals who interact with our website, platform, and services. This Privacy Policy outlines the manner in which we collect, process, store, and safeguard information obtained through your use of our subscription pause infrastructure services.
+            PauseSetu (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting the privacy and personal data of all individuals who interact with our website, platform, and services. This Privacy Policy outlines the manner in which we collect, process, store, and safeguard information obtained through your use of our subscription pause infrastructure services.
           </p>
 
           <p style={para}>
-            By accessing or using PausePay, you acknowledge that you have read, understood, and agreed to the terms of this Privacy Policy. If you do not agree with any provision herein, you must discontinue use of our services immediately.
+            By accessing or using PauseSetu, you acknowledge that you have read, understood, and agreed to the terms of this Privacy Policy. If you do not agree with any provision herein, you must discontinue use of our services immediately.
           </p>
 
           <h2 style={h2Style} className="legal-heading">1. Information We Collect</h2>
           <p style={para}>
-            In the course of providing our services, we collect various categories of information necessary to deliver, maintain, and improve the functionality and security of PausePay. The data collected may include personally identifiable information as well as anonymous technical data.
+            In the course of providing our services, we collect various categories of information necessary to deliver, maintain, and improve the functionality and security of PauseSetu. The data collected may include personally identifiable information as well as anonymous technical data.
           </p>
           <ul style={ulStyle}>
             <li style={liStyle}><strong>Identity Information:</strong> Full name, email address, telephone number, and company affiliation provided during registration.</li>
@@ -107,7 +102,7 @@ export default function PrivacyPolicy() {
             The information collected is utilized exclusively for legitimate business purposes directly related to the provision and enhancement of our services. We do not collect, process, or retain any information beyond what is reasonably necessary to fulfill these purposes.
           </p>
           <ul style={ulStyle}>
-            <li style={liStyle}>To provide, operate, and maintain the PausePay platform and associated services.</li>
+            <li style={liStyle}>To provide, operate, and maintain the PauseSetu platform and associated services.</li>
             <li style={liStyle}>To process subscription pause and resume requests on behalf of merchant clients.</li>
             <li style={liStyle}>To communicate service updates, product announcements, and critical notifications.</li>
             <li style={liStyle}>To comply with regulatory obligations, including Reserve Bank of India (RBI) mandates.</li>
@@ -116,7 +111,7 @@ export default function PrivacyPolicy() {
 
           <h2 style={h2Style} className="legal-heading">3. Data Sharing and Disclosure</h2>
           <p style={para}>
-            PausePay does not sell, rent, trade, or otherwise transfer personally identifiable information to external parties for marketing or commercial purposes. We may, however, share information with trusted third-party service providers under strict contractual obligations, including payment gateways such as Razorpay, communication services such as MSG91, and cloud infrastructure providers. All such arrangements are governed by data protection agreements that enforce confidentiality and security standards equivalent to our own.
+            PauseSetu does not sell, rent, trade, or otherwise transfer personally identifiable information to external parties for marketing or commercial purposes. We may, however, share information with trusted third-party service providers under strict contractual obligations, including payment gateways such as Razorpay, communication services such as MSG91, and cloud infrastructure providers. All such arrangements are governed by data protection agreements that enforce confidentiality and security standards equivalent to our own.
           </p>
 
           <h2 style={h2Style} className="legal-heading">4. Data Security Measures</h2>
@@ -136,7 +131,7 @@ export default function PrivacyPolicy() {
             <li style={liStyle}><strong>Right to Grievance Redressal:</strong> You may file a complaint regarding our data handling practices.</li>
           </ul>
           <p style={para}>
-            To exercise any of these rights, please contact us at <a href="mailto:hello@pausepay.in" style={{ color: C.accent, fontWeight: 600 }}>hello@pausepay.in</a>. We will respond to verified requests within thirty (30) days of receipt.
+            To exercise any of these rights, please contact us at <a href="mailto:hello@pausesetu.in" style={{ color: C.accent, fontWeight: 600 }}>hello@pausesetu.in</a>. We will respond to verified requests within thirty (30) days of receipt.
           </p>
 
           <h2 style={h2Style} className="legal-heading">6. Cookies and Tracking Technologies</h2>
@@ -151,7 +146,7 @@ export default function PrivacyPolicy() {
 
           <h2 style={h2Style} className="legal-heading">8. Amendments to This Policy</h2>
           <p style={para}>
-            We reserve the right to modify this Privacy Policy at any time to reflect changes in our practices, technological developments, legal requirements, or business circumstances. Material changes will be communicated through prominent notice on our website or direct email notification to registered users. Your continued use of PausePay following such modifications constitutes acceptance of the revised policy.
+            We reserve the right to modify this Privacy Policy at any time to reflect changes in our practices, technological developments, legal requirements, or business circumstances. Material changes will be communicated through prominent notice on our website or direct email notification to registered users. Your continued use of PauseSetu following such modifications constitutes acceptance of the revised policy.
           </p>
 
           <h2 style={h2Style} className="legal-heading">9. Contact Information</h2>
@@ -162,17 +157,16 @@ export default function PrivacyPolicy() {
             padding: "24px 28px", background: C.bgAlt, borderRadius: 12,
             fontSize: 14.5, lineHeight: 1.9, color: C.text, marginTop: 16,
           }} className="legal-heading">
-            <p style={{ marginBottom: 4 }}><strong>PausePay</strong></p>
-            <p style={{ marginBottom: 4 }}>Email: <a href="mailto:hello@pausepay.in" style={{ color: C.accent, fontWeight: 600 }}>hello@pausepay.in</a></p>
-            <p style={{ marginBottom: 4 }}>Website: <a href="https://pausepay.in" style={{ color: C.accent, fontWeight: 600 }}>https://pausepay.in</a></p>
-            <p>Jurisdiction: Assam, India</p>
+            <p style={{ marginBottom: 4 }}><strong>PauseSetu</strong></p>
+            <p style={{ marginBottom: 4 }}>Email: <a href="mailto:hello@pausesetu.in" style={{ color: C.accent, fontWeight: 600 }}>hello@pausesetu.in</a></p>
+            <p style={{ marginBottom: 4 }}>Website: <a href="https://pausesetu.in" style={{ color: C.accent, fontWeight: 600 }}>https://pausesetu.in</a></p>
+            <p>Jurisdiction: Lakhimpur District, Assam, India</p>
           </div>
         </div>
 
-        {/* Footer */}
         <div style={{ marginTop: 72, paddingTop: 32, borderTop: `1px solid ${C.border}`, textAlign: "center" }} className="legal-heading">
           <p style={{ fontSize: 12, color: C.textSub, margin: 0 }}>
-            {"\u00A9"} 2026 PausePay. All rights reserved. | Document Version 1.0 | Last revised April 16, 2026
+            {"\u00A9"} 2026 PauseSetu. All rights reserved. | Document Version 1.1 | Last revised May 19, 2026
           </p>
         </div>
       </main>

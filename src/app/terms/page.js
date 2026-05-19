@@ -47,11 +47,9 @@ export default function TermsOfService() {
       <nav style={{ borderBottom: `1px solid ${C.border}`, padding: "16px 24px", background: C.bg, position: "sticky", top: 0, zIndex: 100 }}>
         <div style={{ maxWidth: 880, margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <Link href="/" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }} className="legal-heading">
-            <div style={{ width: 34, height: 34, borderRadius: 9, background: C.accent, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff" }}>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="3" width="5" height="18" rx="1"/><rect x="14" y="3" width="5" height="18" rx="1"/></svg>
-            </div>
+            <img src="/pausesetu-icon.png" alt="PauseSetu" width={34} height={34} style={{ borderRadius: 9, objectFit: "cover" }} />
             <span style={{ fontWeight: 700, fontSize: 19, color: C.text, letterSpacing: "-0.03em" }}>
-              Pause<span style={{ color: C.accentHighlight }}>Pay</span>
+              Pause<span style={{ color: C.accentHighlight }}>Setu</span>
             </span>
           </Link>
           <Link href="/" style={{ color: C.textSub, textDecoration: "none", fontSize: 14, fontWeight: 500 }} className="legal-heading">{"\u2190"} Back to Home</Link>
@@ -59,7 +57,6 @@ export default function TermsOfService() {
       </nav>
 
       <main style={{ maxWidth: 760, margin: "0 auto", padding: "72px 32px 120px" }}>
-        {/* Header */}
         <div className="legal-heading" style={{ marginBottom: 56, paddingBottom: 32, borderBottom: `2px solid ${C.text}` }}>
           <p style={{ color: C.accent, fontSize: 12, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", marginBottom: 16 }}>Legal Document</p>
           <h1 style={{ fontSize: "clamp(36px, 5vw, 52px)", fontWeight: 800, color: C.text, letterSpacing: "-0.035em", lineHeight: 1.1, marginBottom: 16 }}>
@@ -67,24 +64,22 @@ export default function TermsOfService() {
           </h1>
           <div style={{ display: "flex", gap: 24, flexWrap: "wrap", fontSize: 13, color: C.textSub }}>
             <span><strong style={{ color: C.text }}>Effective Date:</strong> April 16, 2026</span>
-            <span><strong style={{ color: C.text }}>Version:</strong> 1.0</span>
+            <span><strong style={{ color: C.text }}>Version:</strong> 1.1</span>
           </div>
         </div>
 
-        {/* Preamble */}
         <div className="legal-heading" style={{
           padding: "20px 24px", borderLeft: `3px solid ${C.accent}`,
           background: C.bgAlt, marginBottom: 40, borderRadius: "0 8px 8px 0",
         }}>
           <p style={{ fontSize: 14, color: C.text, lineHeight: 1.7, fontStyle: "italic" }}>
-            These Terms of Service constitute a legally binding agreement between you and PausePay governing your access to and use of our platform, services, and website. Please read these Terms carefully before using our services.
+            These Terms of Service constitute a legally binding agreement between you and PauseSetu governing your access to and use of our platform, services, and website. Please read these Terms carefully before using our services.
           </p>
         </div>
 
-        {/* Body */}
         <div>
           <p style={para}>
-            Welcome to PausePay. The following Terms of Service (hereinafter referred to as the &quot;Terms&quot;) govern your access to and use of the PausePay platform, including our website located at pausepay.in, our application programming interfaces, software development kits, and all related services (collectively, the &quot;Service&quot;).
+            Welcome to PauseSetu. The following Terms of Service (hereinafter referred to as the &quot;Terms&quot;) govern your access to and use of the PauseSetu platform, including our website located at pausesetu.in, our application programming interfaces, software development kits, and all related services (collectively, the &quot;Service&quot;).
           </p>
 
           <p style={para}>
@@ -93,12 +88,12 @@ export default function TermsOfService() {
 
           <h2 style={h2Style} className="legal-heading">1. Definitions and Interpretation</h2>
           <p style={para}>
-            For the purposes of these Terms, the following definitions shall apply: &quot;PausePay,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot; refers to the operator of this Service. &quot;User,&quot; &quot;you,&quot; or &quot;your&quot; refers to any individual or entity accessing or using the Service. &quot;Merchant&quot; refers to businesses integrating PausePay infrastructure into their subscription products. &quot;Subscriber&quot; refers to end users whose subscriptions are managed through the PausePay platform.
+            For the purposes of these Terms, the following definitions shall apply: &quot;PauseSetu,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot; refers to the operator of this Service. &quot;User,&quot; &quot;you,&quot; or &quot;your&quot; refers to any individual or entity accessing or using the Service. &quot;Merchant&quot; refers to businesses integrating PauseSetu infrastructure into their subscription products. &quot;Subscriber&quot; refers to end users whose subscriptions are managed through the PauseSetu platform.
           </p>
 
           <h2 style={h2Style} className="legal-heading">2. Description of Services</h2>
           <p style={para}>
-            PausePay provides subscription pause infrastructure for businesses operating in the Indian payment ecosystem. Our Service functions as middleware between merchant applications and payment processors, including Razorpay, Cashfree, and PhonePe, enabling pause and resume functionality for recurring subscription payments while maintaining compliance with Reserve Bank of India mandates.
+            PauseSetu provides subscription pause infrastructure for businesses operating in the Indian payment ecosystem. Our Service functions as middleware between merchant applications and payment processors, including Razorpay, Cashfree, and PhonePe, enabling pause and resume functionality for recurring subscription payments while maintaining compliance with Reserve Bank of India mandates.
           </p>
 
           <h2 style={h2Style} className="legal-heading">3. Eligibility Requirements</h2>
@@ -119,7 +114,7 @@ export default function TermsOfService() {
             <li style={liStyle}>All subscription fees are billed in Indian Rupees (INR) on a recurring monthly basis unless otherwise specified.</li>
             <li style={liStyle}>A fourteen (14) day complimentary trial period is available for Starter and Growth tier subscriptions.</li>
             <li style={liStyle}>Subscriptions automatically renew at the end of each billing cycle unless cancelled by the user prior to the renewal date.</li>
-            <li style={liStyle}>Refunds are evaluated on a case-by-case basis at the sole discretion of PausePay.</li>
+            <li style={liStyle}>Refunds are evaluated on a case-by-case basis at the sole discretion of PauseSetu.</li>
             <li style={liStyle}>Price modifications will be communicated to existing subscribers with a minimum of thirty (30) days advance notice.</li>
           </ul>
 
@@ -137,22 +132,22 @@ export default function TermsOfService() {
 
           <h2 style={h2Style} className="legal-heading">7. Regulatory Compliance</h2>
           <p style={para}>
-            PausePay operates in full compliance with all applicable regulations of the Reserve Bank of India, including the e-mandate framework and two-factor authentication requirements that take effect in April 2026. Our Service is designed to uphold and reinforce the integrity of bank mandates, and we do not circumvent any required authentication processes mandated by regulatory authorities.
+            PauseSetu operates in full compliance with all applicable regulations of the Reserve Bank of India, including the e-mandate framework and two-factor authentication requirements that take effect in April 2026. Our Service is designed to uphold and reinforce the integrity of bank mandates, and we do not circumvent any required authentication processes mandated by regulatory authorities.
           </p>
 
           <h2 style={h2Style} className="legal-heading">8. Intellectual Property Rights</h2>
           <p style={para}>
-            All content, code, documentation, trademarks, service marks, logos, and other intellectual property made available through the Service are the exclusive property of PausePay or its licensors, and are protected by applicable copyright, trademark, patent, and other intellectual property laws. You are granted a limited, non-exclusive, non-transferable license to access and use the Service solely in accordance with these Terms.
+            All content, code, documentation, trademarks, service marks, logos, and other intellectual property made available through the Service are the exclusive property of PauseSetu or its licensors, and are protected by applicable copyright, trademark, patent, and other intellectual property laws. You are granted a limited, non-exclusive, non-transferable license to access and use the Service solely in accordance with these Terms.
           </p>
 
           <h2 style={h2Style} className="legal-heading">9. Disclaimers and Limitation of Liability</h2>
           <p style={para}>
-            The Service is provided on an &quot;as is&quot; and &quot;as available&quot; basis without warranties of any kind, either express or implied, including without limitation implied warranties of merchantability, fitness for a particular purpose, or non-infringement. To the maximum extent permitted by applicable law, PausePay shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or relating to your use of the Service. Our aggregate liability for any claim shall not exceed the total amount paid by you to PausePay during the twelve (12) month period immediately preceding the event giving rise to such claim.
+            The Service is provided on an &quot;as is&quot; and &quot;as available&quot; basis without warranties of any kind, either express or implied, including without limitation implied warranties of merchantability, fitness for a particular purpose, or non-infringement. To the maximum extent permitted by applicable law, PauseSetu shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or relating to your use of the Service. Our aggregate liability for any claim shall not exceed the total amount paid by you to PauseSetu during the twelve (12) month period immediately preceding the event giving rise to such claim.
           </p>
 
           <h2 style={h2Style} className="legal-heading">10. Termination</h2>
           <p style={para}>
-            Either party may terminate this agreement by providing thirty (30) days written notice to the other party. PausePay reserves the right to suspend or terminate your access to the Service immediately, without prior notice or liability, if you breach any provision of these Terms or engage in conduct that we determine, in our sole discretion, to be detrimental to the Service or other users. Upon termination, your right to use the Service will cease immediately, though provisions that by their nature should survive termination shall remain in effect.
+            Either party may terminate this agreement by providing thirty (30) days written notice to the other party. PauseSetu reserves the right to suspend or terminate your access to the Service immediately, without prior notice or liability, if you breach any provision of these Terms or engage in conduct that we determine, in our sole discretion, to be detrimental to the Service or other users. Upon termination, your right to use the Service will cease immediately, though provisions that by their nature should survive termination shall remain in effect.
           </p>
 
           <h2 style={h2Style} className="legal-heading">11. Governing Law and Jurisdiction</h2>
@@ -173,17 +168,16 @@ export default function TermsOfService() {
             padding: "24px 28px", background: C.bgAlt, borderRadius: 12,
             fontSize: 14.5, lineHeight: 1.9, color: C.text, marginTop: 16,
           }} className="legal-heading">
-            <p style={{ marginBottom: 4 }}><strong>PausePay</strong></p>
-            <p style={{ marginBottom: 4 }}>Email: <a href="mailto:hello@pausepay.in" style={{ color: C.accent, fontWeight: 600 }}>hello@pausepay.in</a></p>
-            <p style={{ marginBottom: 4 }}>Website: <a href="https://pausepay.in" style={{ color: C.accent, fontWeight: 600 }}>https://pausepay.in</a></p>
-            <p>Jurisdiction: Assam, India</p>
+            <p style={{ marginBottom: 4 }}><strong>PauseSetu</strong></p>
+            <p style={{ marginBottom: 4 }}>Email: <a href="mailto:hello@pausesetu.in" style={{ color: C.accent, fontWeight: 600 }}>hello@pausesetu.in</a></p>
+            <p style={{ marginBottom: 4 }}>Website: <a href="https://pausesetu.in" style={{ color: C.accent, fontWeight: 600 }}>https://pausesetu.in</a></p>
+            <p>Jurisdiction: Lakhimpur District, Assam, India</p>
           </div>
         </div>
 
-        {/* Footer */}
         <div style={{ marginTop: 72, paddingTop: 32, borderTop: `1px solid ${C.border}`, textAlign: "center" }} className="legal-heading">
           <p style={{ fontSize: 12, color: C.textSub, margin: 0 }}>
-            {"\u00A9"} 2026 PausePay. All rights reserved. | Document Version 1.0 | Last revised April 16, 2026
+            {"\u00A9"} 2026 PauseSetu. All rights reserved. | Document Version 1.1 | Last revised May 19, 2026
           </p>
         </div>
       </main>

@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from "react";
 
 const TALLY_URL = "https://tally.so/r/J9JyWX";
 
-/* ═══ HOOKS ═══ */
+/* === HOOKS === */
 function useInView(threshold = 0.1) {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
@@ -31,7 +31,7 @@ function Reveal({ children, delay = 0 }) {
   );
 }
 
-/* ═══ DESIGN TOKENS ═══ */
+/* === DESIGN TOKENS === */
 const C = {
   bg: "#FFFFFF", bgAlt: "#F8F9FA", bgCard: "#FFFFFF",
   text: "#202124", textSub: "#5F6368", textMuted: "#80868B",
@@ -49,15 +49,12 @@ const shadowXl = "0 10px 25px -5px rgba(60,64,67,0.2), 0 8px 10px -6px rgba(60,6
 const wrap = { maxWidth: 1200, margin: "0 auto", padding: "0 24px", width: "100%" };
 const pillRadius = 100;
 
-/* ═══ PAUSE LOGO ═══ */
-const PauseLogo = ({ size = 16 }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
-    <rect x="5" y="3" width="5" height="18" rx="1" />
-    <rect x="14" y="3" width="5" height="18" rx="1" />
-  </svg>
+/* === BRAND LOGO COMPONENT === */
+const BrandLogo = ({ size = 36 }) => (
+  <img src="/pausesetu-icon.png" alt="PauseSetu" width={size} height={size} style={{ borderRadius: size > 20 ? 10 : 4, objectFit: "cover" }} />
 );
 
-/* ═══ ICONS ═══ */
+/* === ICONS === */
 const I = {
   pause: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>,
   play: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>,
@@ -76,9 +73,9 @@ const I = {
 
 const PRICING = [
   {
-    tier: "Starter", price: "2,999", period: "/mo",
+    tier: "Starter", price: "1,999", period: "/mo",
     desc: "For early-stage startups testing pause as a retention feature.",
-    features: ["Up to 500 subscribers", "Pause + Resume API", "Razorpay integration", "Email notifications", "Basic analytics", "Community support"],
+    features: ["Up to 1,000 subscribers", "Pause + Resume API", "Razorpay integration", "Email notifications", "Basic analytics", "Community support"],
     cta: "Start Free Trial", pop: false,
   },
   {
@@ -95,7 +92,7 @@ const PRICING = [
   },
 ];
 
-/* ═══ TOP BAR ═══ */
+/* === TOP BAR === */
 function TopBar() {
   return (
     <div style={{ background: C.amberBg, borderBottom: `1px solid ${C.amberBorder}`, padding: "10px 24px", position: "relative", zIndex: 101 }}>
@@ -103,14 +100,14 @@ function TopBar() {
         <span style={{ color: C.amber, flexShrink: 0 }}>{I.alert}</span>
         <p style={{ fontSize: 13, color: C.text, margin: 0, lineHeight: 1.5 }}>
           <strong>After April 2026, every new payment requires 2FA.</strong>{" "}
-          <span style={{ color: C.textSub }}>PausePay resumes within your existing mandate {"\u2014"} zero friction.</span>
+          <span style={{ color: C.textSub }}>PauseSetu resumes within your existing mandate {"\u2014"} zero friction.</span>
         </p>
       </div>
     </div>
   );
 }
 
-/* ═══ NAV ═══ */
+/* === NAV === */
 function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -135,12 +132,9 @@ function Nav() {
     }}>
       <div style={{ ...wrap, display: "flex", alignItems: "center", justifyContent: "space-between", height: 68 }}>
         <a href="#" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }}>
-          <div style={{
-            width: 36, height: 36, borderRadius: 10, background: C.accent,
-            display: "flex", alignItems: "center", justifyContent: "center", color: C.accentText,
-          }}><PauseLogo size={17} /></div>
+          <BrandLogo size={36} />
           <span style={{ fontWeight: 700, fontSize: 20, color: C.text, letterSpacing: "-0.03em" }}>
-            Pause<span style={{ color: C.accentHighlight }}>Pay</span>
+            Pause<span style={{ color: C.accentHighlight }}>Setu</span>
           </span>
         </a>
 
@@ -183,7 +177,7 @@ function Nav() {
   );
 }
 
-/* ═══ HERO with VISUAL ═══ */
+/* === HERO with VISUAL === */
 function Hero() {
   const [show, setShow] = useState(false);
   useEffect(() => { setShow(true); }, []);
@@ -195,7 +189,6 @@ function Hero() {
 
   return (
     <section style={{ background: C.bg, paddingTop: 64, paddingBottom: 96, position: "relative", overflow: "hidden" }}>
-      {/* Subtle bg gradient */}
       <div style={{
         position: "absolute", top: -200, right: -200, width: 600, height: 600, borderRadius: "50%",
         background: "radial-gradient(circle, rgba(26,115,232,0.04), transparent 70%)", pointerEvents: "none",
@@ -207,7 +200,6 @@ function Hero() {
 
       <div style={{ ...wrap, position: "relative" }}>
         <div className="hero-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "center" }}>
-          {/* Left: Text */}
           <div>
             <div style={f(0.05)}>
               <div style={{
@@ -240,7 +232,7 @@ function Hero() {
                 fontSize: "clamp(15px, 1.4vw, 17px)", color: C.textSub,
                 lineHeight: 1.7, margin: "0 0 32px",
               }}>
-                In India{"\u2019"}s payment stack, subscribers can only <strong style={{ color: C.text }}>pay or cancel</strong>. There{"\u2019"}s no middle ground. PausePay adds the missing pause layer {"\u2014"} keeping mandates alive while billing sleeps.
+                In India{"\u2019"}s payment stack, subscribers can only <strong style={{ color: C.text }}>pay or cancel</strong>. There{"\u2019"}s no middle ground. PauseSetu adds the missing pause layer {"\u2014"} keeping mandates alive while billing sleeps.
               </p>
             </div>
 
@@ -282,20 +274,17 @@ function Hero() {
           {/* Right: Hero Visual - Streamly Phone Mockup */}
           <div style={f(0.4)} className="hero-visual">
             <div style={{ position: "relative", maxWidth: 420, margin: "0 auto" }}>
-              {/* Glow behind phone */}
               <div style={{
                 position: "absolute", inset: -40, borderRadius: 40,
                 background: "linear-gradient(135deg, rgba(26,115,232,0.12), rgba(30,142,62,0.08))",
                 filter: "blur(40px)", zIndex: 0,
               }} />
 
-              {/* Phone Card */}
               <div style={{
                 position: "relative", zIndex: 1,
                 background: C.bgCard, borderRadius: 24, padding: 28,
                 boxShadow: shadowXl, border: `1px solid ${C.borderLight}`,
               }}>
-                {/* App header */}
                 <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 24 }}>
                   <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                     <div style={{
@@ -316,7 +305,6 @@ function Hero() {
                   </div>
                 </div>
 
-                {/* Billing info */}
                 <div style={{
                   padding: "14px 16px", background: C.bgAlt, borderRadius: 12, marginBottom: 16,
                   display: "flex", justifyContent: "space-between", alignItems: "center",
@@ -330,7 +318,6 @@ function Hero() {
                   </div>
                 </div>
 
-                {/* Pause button — HERO element */}
                 <div style={{
                   padding: 20, borderRadius: 16,
                   background: "linear-gradient(135deg, #E8F0FE, #F0F7FF)",
@@ -343,14 +330,7 @@ function Hero() {
                     borderRadius: 100, fontSize: 9, fontWeight: 800, letterSpacing: "0.1em",
                   }}>NEW</div>
                   <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
-                    <div style={{
-                      width: 44, height: 44, borderRadius: 12,
-                      background: C.accent, color: "#fff",
-                      display: "flex", alignItems: "center", justifyContent: "center",
-                      boxShadow: "0 2px 8px rgba(26,115,232,0.35)",
-                    }}>
-                      <PauseLogo size={20} />
-                    </div>
+                    <BrandLogo size={44} />
                     <div style={{ flex: 1 }}>
                       <p style={{ fontSize: 15, fontWeight: 700, color: C.text, margin: "0 0 2px" }}>Pause for 30 days</p>
                       <p style={{ fontSize: 12, color: C.textSub, margin: 0 }}>Resume automatically on Jun 15</p>
@@ -358,7 +338,6 @@ function Hero() {
                   </div>
                 </div>
 
-                {/* Cancel option (greyed out) */}
                 <div style={{
                   padding: "12px 16px", borderRadius: 12,
                   border: `1px solid ${C.borderLight}`, opacity: 0.45,
@@ -370,14 +349,12 @@ function Hero() {
                   <p style={{ fontSize: 13, color: C.textMuted, margin: 0 }}>Cancel subscription</p>
                 </div>
 
-                {/* Powered by PausePay */}
+                {/* Powered by PauseSetu */}
                 <div style={{ marginTop: 20, paddingTop: 16, borderTop: `1px solid ${C.borderLight}`, display: "flex", alignItems: "center", justifyContent: "center", gap: 6 }}>
                   <p style={{ fontSize: 10, color: C.textMuted, margin: 0 }}>Powered by</p>
                   <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
-                    <div style={{ width: 14, height: 14, borderRadius: 4, background: C.accent, color: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                      <PauseLogo size={8} />
-                    </div>
-                    <span style={{ fontSize: 11, fontWeight: 700, color: C.text }}>Pause<span style={{ color: C.accentHighlight }}>Pay</span></span>
+                    <BrandLogo size={14} />
+                    <span style={{ fontSize: 11, fontWeight: 700, color: C.text }}>Pause<span style={{ color: C.accentHighlight }}>Setu</span></span>
                   </div>
                 </div>
               </div>
@@ -396,7 +373,7 @@ function Hero() {
   );
 }
 
-/* ═══ TRUST STRIP ═══ */
+/* === TRUST STRIP === */
 function TrustStrip() {
   return (
     <section style={{ background: C.bgAlt, padding: "40px 0", borderTop: `1px solid ${C.border}`, borderBottom: `1px solid ${C.border}` }}>
@@ -419,7 +396,7 @@ function TrustStrip() {
   );
 }
 
-/* ═══ PROBLEM ═══ */
+/* === PROBLEM === */
 function Problem() {
   return (
     <section id="problem" style={{ background: C.bg, padding: "100px 0" }}>
@@ -485,11 +462,11 @@ function Problem() {
   );
 }
 
-/* ═══ SOLUTION ═══ */
+/* === SOLUTION === */
 function Solution() {
   const steps = [
     { icon: I.code, num: "01", title: "Integrate the SDK", desc: "Drop in our lightweight SDK or use the REST API. Connect your Razorpay, Cashfree, or PhonePe account in under 10 minutes." },
-    { icon: I.bot, num: "02", title: "User pauses via button or AI", desc: "Your subscribers tap \u201CPause\u201D in your app or tell your AI chatbot. PausePay captures intent, duration, and reason." },
+    { icon: I.bot, num: "02", title: "User pauses via button or AI", desc: "Your subscribers tap \u201CPause\u201D in your app or tell your AI chatbot. PauseSetu captures intent, duration, and reason." },
     { icon: I.cal, num: "03", title: "Auto-resume on chosen date", desc: "When the pause period ends, billing restarts automatically under the existing bank mandate. No 2FA. No re-signup." },
   ];
 
@@ -526,7 +503,7 @@ function Solution() {
   );
 }
 
-/* ═══ HOW IT WORKS ═══ */
+/* === HOW IT WORKS === */
 function HowItWorks() {
   const Box = ({ emoji, label, sub, accent }) => (
     <div style={{
@@ -553,7 +530,7 @@ function HowItWorks() {
         <Reveal>
           <div style={{ textAlign: "center", maxWidth: 580, margin: "0 auto 56px" }}>
             <p style={{ fontSize: 13, fontWeight: 700, color: C.accentLabel, letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: 14 }}>Architecture</p>
-            <h2 style={{ fontSize: "clamp(28px, 3.8vw, 44px)", fontWeight: 800, color: C.text, lineHeight: 1.15, letterSpacing: "-0.03em" }}>How PausePay works</h2>
+            <h2 style={{ fontSize: "clamp(28px, 3.8vw, 44px)", fontWeight: 800, color: C.text, lineHeight: 1.15, letterSpacing: "-0.03em" }}>How PauseSetu works</h2>
           </div>
         </Reveal>
 
@@ -567,10 +544,10 @@ function HowItWorks() {
                 background: C.accentBg, border: `2px solid ${C.accent}`,
                 borderRadius: 16, boxShadow: shadowLg,
               }}>
-                <div style={{ width: 40, height: 40, borderRadius: 10, background: C.accent, display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 8px", color: C.accentText }}>
-                  <PauseLogo size={18} />
+                <div style={{ margin: "0 auto 8px", display: "flex", justifyContent: "center" }}>
+                  <BrandLogo size={40} />
                 </div>
-                <p style={{ fontWeight: 700, fontSize: 13, color: C.accent, margin: "0 0 2px" }}>PausePay</p>
+                <p style={{ fontWeight: 700, fontSize: 13, color: C.accent, margin: "0 0 2px" }}>PauseSetu</p>
                 <p style={{ fontSize: 11, color: C.textMuted, margin: 0 }}>Middleware</p>
               </div>
               <Arrow />
@@ -594,7 +571,7 @@ function HowItWorks() {
 
         <Reveal delay={0.25}>
           <p style={{ textAlign: "center", fontSize: 15, color: C.textSub, lineHeight: 1.7, maxWidth: 540, margin: "32px auto 0" }}>
-            The bank mandate stays <strong style={{ color: C.text }}>active</strong> the entire time. When the pause ends, PausePay instructs the gateway to resume {"\u2014"} no new 2FA needed.
+            The bank mandate stays <strong style={{ color: C.text }}>active</strong> the entire time. When the pause ends, PauseSetu instructs the gateway to resume {"\u2014"} no new 2FA needed.
           </p>
         </Reveal>
       </div>
@@ -602,7 +579,7 @@ function HowItWorks() {
   );
 }
 
-/* ═══ SOCIAL PROOF ═══ */
+/* === SOCIAL PROOF === */
 function SocialProof() {
   return (
     <section style={{ background: C.bgAlt, padding: "80px 0" }}>
@@ -631,7 +608,7 @@ function SocialProof() {
   );
 }
 
-/* ═══ PRICING ═══ */
+/* === PRICING === */
 function Pricing() {
   return (
     <section id="pricing" style={{ background: C.bg, padding: "100px 0" }}>
@@ -642,7 +619,7 @@ function Pricing() {
             <h2 style={{ fontSize: "clamp(28px, 3.8vw, 44px)", fontWeight: 800, color: C.text, lineHeight: 1.15, letterSpacing: "-0.03em", margin: "0 0 12px" }}>
               Simple, transparent pricing
             </h2>
-            <p style={{ fontSize: 16, color: C.textSub, margin: 0 }}>14-day free trial. No credit card required.</p>
+            <p style={{ fontSize: 16, color: C.textSub, margin: 0 }}>30-day free trial. No credit card required.</p>
           </div>
         </Reveal>
 
@@ -695,7 +672,7 @@ function Pricing() {
   );
 }
 
-/* ═══ WAITLIST ═══ */
+/* === WAITLIST === */
 function Waitlist() {
   return (
     <section id="waitlist" style={{ background: C.bgAlt, padding: "100px 0" }}>
@@ -722,7 +699,7 @@ function Waitlist() {
               width="100%"
               height="520"
               frameBorder="0"
-              title="PausePay Waitlist"
+              title="PauseSetu Waitlist"
               style={{ display: "block" }}
             />
           </div>
@@ -732,7 +709,7 @@ function Waitlist() {
   );
 }
 
-/* ═══ FOOTER ═══ */
+/* === FOOTER === */
 function Footer() {
   const fLink = { color: C.textSub, fontSize: 13.5, textDecoration: "none" };
   return (
@@ -741,13 +718,11 @@ function Footer() {
         <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 40, marginBottom: 48 }}>
           <div style={{ maxWidth: 280 }}>
             <div style={{ display: "flex", alignItems: "center", gap: 9, marginBottom: 14 }}>
-              <div style={{ width: 30, height: 30, borderRadius: 8, background: C.accent, display: "flex", alignItems: "center", justifyContent: "center", color: C.accentText }}>
-                <PauseLogo size={13} />
-              </div>
-              <span style={{ fontWeight: 700, fontSize: 17, color: C.text }}>Pause<span style={{ color: C.accentHighlight }}>Pay</span></span>
+              <BrandLogo size={30} />
+              <span style={{ fontWeight: 700, fontSize: 17, color: C.text }}>Pause<span style={{ color: C.accentHighlight }}>Setu</span></span>
             </div>
             <p style={{ fontSize: 13, color: C.textMuted, lineHeight: 1.6, margin: 0 }}>
-              {"India\u2019s first subscription pause infrastructure. Stop churn before it starts."}
+              {"India\u2019s first subscription pause infrastructure. The bridge to subscription control."}
             </p>
           </div>
 
@@ -771,14 +746,14 @@ function Footer() {
               <p style={{ fontSize: 11, fontWeight: 700, color: C.textMuted, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 14 }}>Connect</p>
               <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                 <a href="https://github.com/pausepay" target="_blank" rel="noopener noreferrer" style={fLink}>GitHub</a>
-                <a href="mailto:hello@pausepay.in" style={fLink}>hello@pausepay.in</a>
+                <a href="mailto:hello@pausesetu.in" style={fLink}>hello@pausesetu.in</a>
               </div>
             </div>
           </div>
         </div>
 
         <div style={{ borderTop: `1px solid ${C.border}`, paddingTop: 24, display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 8 }}>
-          <p style={{ fontSize: 12, color: C.textMuted, margin: 0 }}>{"\u00A9"} 2026 PausePay. All rights reserved.</p>
+          <p style={{ fontSize: 12, color: C.textMuted, margin: 0 }}>{"\u00A9"} 2026 PauseSetu. All rights reserved.</p>
           <p style={{ fontSize: 12, color: C.textMuted, margin: 0 }}>Built in Assam, India {"\uD83C\uDDEE\uD83C\uDDF3"}</p>
         </div>
       </div>
@@ -786,7 +761,7 @@ function Footer() {
   );
 }
 
-/* ═══ MAIN ═══ */
+/* === MAIN === */
 export default function Home() {
   return (
     <div style={{
