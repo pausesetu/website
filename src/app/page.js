@@ -734,7 +734,7 @@ function Footer() {
               <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                 <a href="#how" style={fLink}>How It Works</a>
                 <a href="#pricing" style={fLink}>Pricing</a>
-                <a href="https://github.com/pausepay" target="_blank" rel="noopener noreferrer" style={fLink}>Documentation</a>
+                <a href="https://github.com/pausesetu" target="_blank" rel="noopener noreferrer" style={fLink}>Documentation</a>
               </div>
             </div>
             <div>
@@ -748,7 +748,7 @@ function Footer() {
             <div>
               <p style={{ fontSize: 11, fontWeight: 700, color: C.textMuted, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 14 }}>Connect</p>
               <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-                <a href="https://github.com/pausepay" target="_blank" rel="noopener noreferrer" style={fLink}>GitHub</a>
+                <a href="https://github.com/pausesetu" target="_blank" rel="noopener noreferrer" style={fLink}>GitHub</a>
                 <a href="mailto:hello@pausesetu.in" style={fLink}>hello@pausesetu.in</a>
               </div>
             </div>
