@@ -742,6 +742,7 @@ function Footer() {
               <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                 <a href="/privacy" style={fLink}>Privacy Policy</a>
                 <a href="/terms" style={fLink}>Terms of Service</a>
+              <a href="/refund" style={fLink}>Refund Policy</a>
               </div>
             </div>
             <div>
