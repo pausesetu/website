@@ -734,7 +734,7 @@ function Footer() {
               <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                 <a href="#how" style={fLink}>How It Works</a>
                 <a href="#pricing" style={fLink}>Pricing</a>
-                <a href="https:///docs" style={fLink}>API Docs</a>
+                <a href="/docs" style={fLink}>API Docs</a>
               </div>
             </div>
             <div>
