@@ -151,8 +151,8 @@ export default function DocsPage() {
         <div style={codeBlock}>
           <span style={{ color: commentColor }}>{'# Include your API key in every request'}</span>{'\n'}
           <span style={{ color: keyColor }}>curl</span> -X GET https://pausesetu-api.onrender.com/api/v1/merchant/subscriptions \{'\n'}
-          {'  '}-H <span style={{ color: strColor }}>"X-API-Key: your_api_key_here"</span> \{'\n'}
-          {'  '}-H <span style={{ color: strColor }}>"Content-Type: application/json"</span>
+          {'  '}-H <span style={{ color: strColor }}>{'"X-API-Key: your_api_key_here"'}</span> \{'\n'}
+          {'  '}-H <span style={{ color: strColor }}>{'"Content-Type: application/json"'}</span>
         </div>
 
         {/* Core Endpoints */}
@@ -221,8 +221,8 @@ export default function DocsPage() {
         <div style={codeBlock}>
           <span style={{ color: commentColor }}>{'# Pause a subscription for 30 days'}</span>{'\n'}
           <span style={{ color: keyColor }}>curl</span> -X POST https://pausesetu-api.onrender.com/api/v1/subscriptions/{'{'}<span style={{ color: numColor }}>id</span>{'}'}/pause \{'\n'}
-          {'  '}-H <span style={{ color: strColor }}>"X-API-Key: your_api_key_here"</span> \{'\n'}
-          {'  '}-H <span style={{ color: strColor }}>"Content-Type: application/json"</span> \{'\n'}
+          {'  '}-H <span style={{ color: strColor }}>{'"X-API-Key: your_api_key_here"'}</span> \{'\n'}
+          {'  '}-H <span style={{ color: strColor }}>{'"Content-Type: application/json"'}</span> \{'\n'}
           {'  '}-d <span style={{ color: strColor }}>{'\'{"pause_days": 30, "reason": "vacation"}\''}
           </span>
         </div>
@@ -232,12 +232,12 @@ export default function DocsPage() {
         </p>
         <div style={codeBlock}>
           {'{\n'}
-          {'  '}<span style={{ color: keyColor }}>"status"</span>: <span style={{ color: strColor }}>"paused"</span>,{'\n'}
-          {'  '}<span style={{ color: keyColor }}>"pause_start"</span>: <span style={{ color: strColor }}>"2026-06-21T00:00:00Z"</span>,{'\n'}
-          {'  '}<span style={{ color: keyColor }}>"resume_date"</span>: <span style={{ color: strColor }}>"2026-07-21T00:00:00Z"</span>,{'\n'}
-          {'  '}<span style={{ color: keyColor }}>"mandate_status"</span>: <span style={{ color: strColor }}>"active"</span>,{'\n'}
-          {'  '}<span style={{ color: keyColor }}>"charge"</span>: <span style={{ color: numColor }}>0</span>,{'\n'}
-          {'  '}<span style={{ color: keyColor }}>"message"</span>: <span style={{ color: strColor }}>"Subscription paused successfully"</span>{'\n'}
+          {'  '}<span style={{ color: keyColor }}>{'"status"'}</span>: <span style={{ color: strColor }}>{'"paused"'}</span>,{'\n'}
+          {'  '}<span style={{ color: keyColor }}>{'"pause_start"'}</span>: <span style={{ color: strColor }}>{'"2026-06-21T00:00:00Z"'}</span>,{'\n'}
+          {'  '}<span style={{ color: keyColor }}>{'"resume_date"'}</span>: <span style={{ color: strColor }}>{'"2026-07-21T00:00:00Z"'}</span>,{'\n'}
+          {'  '}<span style={{ color: keyColor }}>{'"mandate_status"'}</span>: <span style={{ color: strColor }}>{'"active"'}</span>,{'\n'}
+          {'  '}<span style={{ color: keyColor }}>{'"charge"'}</span>: <span style={{ color: numColor }}>0</span>,{'\n'}
+          {'  '}<span style={{ color: keyColor }}>{'"message"'}</span>: <span style={{ color: strColor }}>{'"Subscription paused successfully"'}</span>{'\n'}
           {'}'}
         </div>
 
@@ -299,10 +299,10 @@ export default function DocsPage() {
         <div style={codeBlock}>
           <span style={{ color: commentColor }}>{'# Parse a natural language date'}</span>{'\n'}
           <span style={{ color: keyColor }}>curl</span> -X POST https://pausesetu-api.onrender.com/api/v1/ai/parse-date \{'\n'}
-          {'  '}-H <span style={{ color: strColor }}>"Content-Type: application/json"</span> \{'\n'}
+          {'  '}-H <span style={{ color: strColor }}>{'"Content-Type: application/json"'}</span> \{'\n'}
           {'  '}-d <span style={{ color: strColor }}>{'\'{"text": "pause for 2 weeks", "language": "en"}\''}</span>{'\n\n'}
           <span style={{ color: commentColor }}>{'# Response'}</span>{'\n'}
-          {'{ '}<span style={{ color: keyColor }}>"parsed_date"</span>: <span style={{ color: strColor }}>"2026-07-05"</span>, <span style={{ color: keyColor }}>"confidence"</span>: <span style={{ color: numColor }}>0.95</span>, <span style={{ color: keyColor }}>"parser"</span>: <span style={{ color: strColor }}>"regex"</span> {'}'}
+          {'{ '}<span style={{ color: keyColor }}>{'"parsed_date"'}</span>: <span style={{ color: strColor }}>{'"2026-07-05"'}</span>, <span style={{ color: keyColor }}>{'"confidence"'}</span>: <span style={{ color: numColor }}>0.95</span>, <span style={{ color: keyColor }}>{'"parser"'}</span>: <span style={{ color: strColor }}>{'"regex"'}</span> {'}'}
         </div>
 
         {/* Error Codes */}
